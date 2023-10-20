@@ -3,6 +3,14 @@ os: linux
 dist: jammy
 python:
   - "3.11"
+
+install:
+  - gem install webrick
+  - pip install -r requirements.txt
+  - pip install black
+  - pip install flake8
+  - pip install coveralls
+
 script: true
 
 deploy:
@@ -15,4 +23,3 @@ deploy:
     bucket_name: "elasticbeanstalk-us-west-2-083086457391"
     on:
       branch: main
-    
