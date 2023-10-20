@@ -2,6 +2,6 @@ language: python
 os: linux
 dist: jammy
 python:
-  - "3.9"
+  - "3.10"
 script: true
 
