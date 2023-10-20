@@ -6,12 +6,15 @@ python:
 script: true
 
 deploy:
-  provider: elasticbeanstalk
-  access_key_id:
-    secure: "Encrypted <access-key-id>=AKIARGWCWXIX75QMYP6X"
-  secret_access_key:
-    secure: "Encypted <secret-access-key>=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"
-  region: "us-east-1"
-  app: "swe-app"
-  env: "swe-app-env"
-  bucket_name: "swe-app-bucket"
+
+  - provider: elasticbeanstalk
+    access_key_id:
+      secure: "Encrypted <access-key-id>=AKIARGWCWXIX75QMYP6X"
+    secret_access_key:
+      secure: "Encypted <secret-access-key>=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"
+    region: "us-east-1"
+    app: "swe-app"
+    env: "swe-app-env"
+    bucket_name: "swe-app-bucket"
+    on:
+      branch: main
