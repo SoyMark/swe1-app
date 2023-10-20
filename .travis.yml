@@ -12,7 +12,7 @@ deploy:
     region: "us-west-2"
     app: "swe_app"
     env: "swe-app-env"
-    bucket_name: "swe-app-bucket"
+    bucket_name: "elasticbeanstalk-us-west-2-083086457391"
     on:
       branch: main
     
