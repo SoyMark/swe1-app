@@ -9,8 +9,8 @@ deploy:
   - provider: elasticbeanstalk
     access_key_id: $AWS_ACCESS_KEY_ID
     secret_access_key: $AWS_SECRET_ACCESS_KEY
-    region: "us-east-1"
-    app: "swe-app"
+    region: "us-west-2"
+    app: "swe_app"
     env: "swe-app-env"
     bucket_name: "swe-app-bucket"
     on:
