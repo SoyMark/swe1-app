@@ -10,8 +10,16 @@ install:
   - pip install black
   - pip install flake8
   - pip install coveralls
+  - mkdir ./tools
+  - curl -L https://coveralls.io/coveralls-linux.tar.gz | tar -xz -C ./tools
 
-script: true
+script:
+  - black . --check
+  - flake8 --max-line-length=88
+  - coverage run --source=swe_app,polls manage.py test
+  - coverage xml
+  - ./tools/coveralls report --repo-token=$COVERALLS_REPO_TOKEN ./coverage.xml
+  
 
 deploy:
   - provider: elasticbeanstalk
