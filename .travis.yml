@@ -1,6 +1,6 @@
 language: python
 os: linux
-dist: jammy
+dist: jammy # Ubuntu 22.04  if not specified, python 3.11 won't be supported
 python:
   - "3.11"
 
